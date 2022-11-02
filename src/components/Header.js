@@ -14,7 +14,7 @@ const Header = () => {
   const items = useSelector(selectItems);
   return (
     <header>
-      <div className="flex items-center bg-blue-900 p-1 flex-grow py-2">
+      <div className="flex items-center justify-between bg-blue-900 p-1  py-2">
         <div className="mt-2 flex items-center flex-grow sm:flex-grow-0">
           <Image
             onClick={() => router.push("/")}

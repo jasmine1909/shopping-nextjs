@@ -3,20 +3,9 @@ import Product from "./Product";
 
 const ProductFeed = ({ products }) => {
   return (
-    <div className="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:-mt-52 mx-auto">
-      {products.map((product) => (
-        <Product
-          id={product.id}
-          title={product.title}
-          price={product.price}
-          description={product.description}
-          category={product.category}
-          image={product.image}
-        />
-      ))}
-
-      <div className="md:col-span-2">
-        {products.slice(5, products.length).map((product) => (
+    <div>
+      <div className="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:-mt-52 mx-auto">
+        {products.map((product) => (
           <Product
             id={product.id}
             title={product.title}
@@ -26,6 +15,21 @@ const ProductFeed = ({ products }) => {
             image={product.image}
           />
         ))}
+      </div>
+      <div>
+        <div className=" ">
+          <h1 className="ml-6"> Best Seller</h1>
+          {products.slice(6, products.length).map((product) => (
+            <Product
+              id={product.id}
+              title={product.title}
+              price={product.price}
+              description={product.description}
+              category={product.category}
+              image={product.image}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

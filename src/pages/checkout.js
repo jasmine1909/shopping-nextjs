@@ -41,7 +41,7 @@ const checkout = () => {
             ))}
           </div>
         </div>
-        <div className="">
+        <div className="flex flex-col">
           {items.length > 0 && (
             <>
               <h2 className="whitespace-nowrap">

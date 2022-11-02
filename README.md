@@ -10,3 +10,8 @@ authentication - enable google auth -> sdk configuaration get goole ID and googl
 
 2.APIS and Services
 3.Credentials 4. create credentoals client ID: with localhost:3000
+
+<**********\*\*\*\*********** DEploy VErcel>
+Settings environment Variables
+
+ADD : GOOGLE_ID, GOOGLE_SECRET

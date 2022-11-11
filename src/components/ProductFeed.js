@@ -18,17 +18,19 @@ const ProductFeed = ({ products }) => {
       </div>
       <div>
         <div className=" ">
-          <h1 className="ml-6"> Best Seller</h1>
-          {products.slice(6, products.length).map((product) => (
-            <Product
-              id={product.id}
-              title={product.title}
-              price={product.price}
-              description={product.description}
-              category={product.category}
-              image={product.image}
-            />
-          ))}
+          <h1 className="ml-6 text-2xl font-semibold"> Best Seller</h1>
+          <div className="grid md:grid-cols-2">
+            {products.slice(6, products.length).map((product) => (
+              <Product
+                id={product.id}
+                title={product.title}
+                price={product.price}
+                description={product.description}
+                category={product.category}
+                image={product.image}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>

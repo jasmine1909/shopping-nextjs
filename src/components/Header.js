@@ -6,6 +6,7 @@ import { useSession, signIn, signOut } from "next-auth/react";
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 import { selectItems } from "../slices/basketSlice";
+import Logo from "../.././public/logo.png";
 
 const Header = () => {
   const { data: session } = useSession();
@@ -14,11 +15,11 @@ const Header = () => {
   const items = useSelector(selectItems);
   return (
     <header>
-      <div className="flex items-center justify-between bg-blue-900 p-1  py-2">
+      <div className="flex items-center justify-between  text-black bg-[#1373E5] p-1  py-2">
         <div className="mt-2 flex items-center flex-grow sm:flex-grow-0">
           <Image
             onClick={() => router.push("/")}
-            src="https://images.unsplash.com/photo-1633409361618-c73427e4e206?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
+            src={Logo}
             width={150}
             height={60}
           />
@@ -27,7 +28,7 @@ const Header = () => {
         <div className="hover:bg-yellow-500  items-center  rounded-md bg-yellow-400 h-10 hidden sm:flex">
           <input
             type="text"
-            className="h-full w-18 flex-grow p-2 flex-shrink rounded-l-md outline-none"
+            className="h-full w-2/3 flex-grow p-2 flex-shrink rounded-l-md outline-none"
           />
           <BsSearch className="bg-yellow-400 rounded-r-md w-8 " />
         </div>
@@ -45,9 +46,9 @@ const Header = () => {
             onClick={() => router.push("/checkout")}
             className="relative flex items-center link"
           >
-            <BsFillBasket2Fill />
+            <BsFillBasket2Fill className="mr-2 text-lg  " />
             <div>
-              <span className="absolute  top-2 right-2 bg-yellow-400 hover:bg-yellow-600 text-black text-bold">
+              <span className="absolute  -top-5 -right-2 p-1 rounded-full bg-yellow-400 hover:bg-yellow-600 text-black text-bold">
                 {items.length}
               </span>
               <p className="font-extrabold">Baskets</p>
@@ -56,9 +57,9 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="flex items-center bg-blue-900 p-2 pl-6 text-white space-x-3">
+      <div className="flex items-center bg-[#0441AB] p-2 pl-6 text-white space-x-3">
         <p className="link flex items-center">
-          <FiMenu /> All
+          <FiMenu className="mr-2" /> All
         </p>
         <p className="link">Business</p>
         <p className="link">Video</p>

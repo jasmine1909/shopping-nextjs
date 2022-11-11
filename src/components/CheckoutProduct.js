@@ -36,18 +36,18 @@ const CheckoutProduct = ({
   };
   return (
     <div>
-      <div className="grid grid-cols-3">
-        <Image src={image} width={200} height={200} />
+      <div className=" p-8 flex   flex-col  w-8/12">
+        <Image src={image} width={120} height={120} />
 
-        <div className="col-span-3 mx-5">
+        <div className="grid-col col-span-3 my-5">
           <h4 className="font-weight-bold">{title}</h4>
 
-          <p className="text-xs line-clamp-3 my-2">{description}</p>
+          <p className="text-xs line-clamp-3  text-left">{description}</p>
           <p> $ {price}</p>
           {hasPrime && (
             <div className="flex items-center space-x-2">
               <img loading="lazy" src="" className="w-12" />
-              <p className="text-xs text-gray-500"> Free shipping </p>
+              <div className="text-xs text-gray-500"> Free shipping </div>
             </div>
           )}
         </div>
